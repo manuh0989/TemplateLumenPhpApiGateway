@@ -27,6 +27,7 @@ $app->withFacades();
 
 $app->withEloquent();
 
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -60,6 +61,7 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('services');
 
 /*
 |--------------------------------------------------------------------------
