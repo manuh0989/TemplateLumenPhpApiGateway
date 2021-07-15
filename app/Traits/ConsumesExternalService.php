@@ -3,14 +3,13 @@
 namespace App\Traits;
 
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Http;
 
-trait ConsumesExteralService
+trait ConsumesExternalService
 {
     public function performRequest($method, $requestUrl, $formParams = [], $headers  = [])
     {
         $client = new Client([
-            'base_url' => $this->baseUri,
+            'base_uri' => $this->baseUri,
         ]);
 
         $response = $client->request($method, $requestUrl, [
